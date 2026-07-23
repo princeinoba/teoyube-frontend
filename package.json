@@ -4,6 +4,7 @@
   "private": true,
   "description": "Self-contained static Teoyube frontend for GitHub and Vercel.",
   "scripts": {
+    "build": "npm run build:vercel",
     "build:vercel": "node scripts/buildVercelStatic.cjs",
     "build:vercel:validate": "node scripts/validateVercelBuild.cjs",
     "preview:vercel": "node scripts/serveVercelDist.cjs",
