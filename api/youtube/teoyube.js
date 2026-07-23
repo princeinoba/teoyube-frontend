@@ -14,7 +14,8 @@ const videos = [
 }));
 
 module.exports = function handler(request, response) {
-  const query = String(request.query?.q || "").toLowerCase().replace("teoyubeworld", "").trim();
+  const requestUrl = new URL(request.url || "/", "https://teoyube.invalid");
+  const query = String(requestUrl.searchParams.get("q") || "").toLowerCase().replace("teoyubeworld", "").trim();
   const filtered = query ? videos.filter((video) => JSON.stringify(video).toLowerCase().includes(query)) : videos;
   response.setHeader("Content-Type", "application/json; charset=utf-8");
   response.setHeader("Cache-Control", "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400");
