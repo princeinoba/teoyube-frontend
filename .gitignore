@@ -1,0 +1,65 @@
+# Secrets and local configuration
+.env
+.env.local
+.env.*.local
+/config/local-media-path.json
+
+# Dependencies and framework caches
+node_modules/
+.next/
+.tmp/
+.media-tmp/
+.vercel/
+dist/
+coverage/
+*.log
+
+# Protected local source media
+/media-source/
+/media-source/teoyubeworld/originals/
+
+# Generated owner-review and processing artifacts
+/generated/teoyubeworld-media/
+/generated/workspace-rescue/
+/generated/**/contact-sheets/
+/generated/**/posters/
+/generated/**/thumbnails/
+/generated/**/temporary/
+/generated/**/logs/
+
+# Archives and handoff bundles
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local backups and probes
+*.backup
+*.bak
+archive/local-only/
+.tmp-apply-patch-probe.txt
+
+# Frontend-only release boundary (kept locally, never pushed)
+/.env.example
+/server.js
+/Asset/
+/sql/
+/docs/teoyube/
+/src/app/
+/src/components/
+/src/lib/
+/ROUTING_SIMPLIFICATION.md
+/scripts/*
+!/scripts/buildVercelStatic.cjs
+!/scripts/validateVercelBuild.cjs
+!/scripts/checkGitHubPushReadiness.cjs
+!/scripts/serveVercelDist.cjs

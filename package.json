@@ -1,0 +1,12 @@
+{
+  "name": "teoyube-vision-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-contained static Teoyube frontend for GitHub and Vercel.",
+  "scripts": {
+    "build:vercel": "node scripts/buildVercelStatic.cjs",
+    "build:vercel:validate": "node scripts/validateVercelBuild.cjs",
+    "preview:vercel": "node scripts/serveVercelDist.cjs",
+    "github:check": "node scripts/checkGitHubPushReadiness.cjs"
+  }
+}
