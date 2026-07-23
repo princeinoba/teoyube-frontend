@@ -1,8 +1,10 @@
 .git/
+.agents/
 .next/
 .tmp/
 .media-tmp/
 .vercel/
+dist/
 media-source/
 generated/
 docs/
@@ -11,6 +13,10 @@ sql/
 archive/
 coverage/
 node_modules/
+src/app/
+src/components/
+src/lib/
+ROUTING_SIMPLIFICATION.md
 *.log
 *.zip
 *.7z
@@ -19,6 +25,7 @@ node_modules/
 *.tar.gz
 *.tgz
 .env
+.env.example
 .env.local
 .env.*.local
 config/local-media-path.json
